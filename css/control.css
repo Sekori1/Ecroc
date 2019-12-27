@@ -1,0 +1,306 @@
+/*
+COLORS:
+
+#1A1D26
+#223645
+#DCDCDC
+#FFF5EF
+#B83A1B
+
+*/
+
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+
+p,h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+}
+
+/* DOG HEADER */
+
+#dog-header-container {
+    color: #223645;
+    margin: 0 auto;
+    padding: 20px 0;
+    text-align: center;
+}
+
+#dog-header-container .photo {
+    height: 170px;
+    width: 170px;
+    border-radius: 50%;
+    border: solid 6px #223645;
+    background-size: cover;
+    background-position: center;
+    margin: 0 auto;
+}
+
+#dog-header-container h2 {
+  text-align: center;
+  font-size: 2em;
+}
+
+#editLinkContainer {
+  flex-shrink: 0;
+}
+
+#editLinkContainer a {
+  display: block;
+  margin: 10px 0;
+}
+
+
+/* EDIT BUTTON */
+
+
+.editButton {
+  display: block;
+  display: inline-block;
+  background-color: #223645;
+  font-size: 2em;
+  margin: 0 auto;
+  border-radius: 15px;
+  transition-duration: 0.4s;
+  padding: 0 20px;
+}
+
+.editButton:hover {
+  background-color: #172027;
+  text-decoration: none;
+}
+
+
+.editButton p {
+  color: #DCDCDC;
+  display: inline;
+}
+.editButton svg {
+  display: inline;
+  height: 25px;
+  fill: #DCDCDC;
+  margin-right: 20px;
+}
+
+/**********************************************************************************************************************/
+/*     MEAL DISPLAY */
+/**********************************************************************************************************************/
+
+  /* VALUES DISPLAYER*/
+
+
+    #meal-info-container .meal-container {
+      height: 60px;
+      background-color: #223645;
+      overflow: hidden;
+    }
+
+    #meal-info-container .meal-displayer-container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 100%;
+      height: 100%;
+      transition-duration: 0.8s;
+    }
+
+    #meal-info-container .meal-displayer {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      height: 100%;
+      box-sizing: border-box;
+      padding: 10px;
+    }
+
+    #meal-info-container .meal {
+      color: #FFF5EF;
+      flex-grow: 1;
+    }
+
+    #meal-info-container .meal h4.food-amount {
+      text-align: center;
+      font-size: 24px;
+      margin: 0;
+    }
+
+    #meal-info-container .meal p.food-hour {
+      text-align: center;
+      font-size: 14px;
+      margin: 0;
+    }
+
+  /* DAY SELECTOR */
+
+      /* Conteneur du selecteur de date */
+    #meal-info-container .selector-container {
+      height: 35px;
+      border: solid 4px #223645;
+      display: flex;
+      flex-direction: row;
+      overflow: hidden; /* Tous les jours qui dépasse de selecteur de date sont cachés*/
+    }
+
+      /* Centre les elements verticalement grace au flex du parent*/
+    #meal-info-container .selector-container * {
+      margin: auto;
+    }
+
+      /* Taille des boutons avant et apres*/
+    #before-meal-button, #after-meal-button {
+      z-index: 100;
+      height: 20px;
+    }
+
+      /* Taille du SVG egale à la taille du parent (Bouton) et ajout de marges*/
+    #meal-info-container .selector-container svg {
+      margin: 0 10px;
+      padding: 0;
+      height: 100%;
+    }
+
+      /* Coloration des svg des boutons */
+    #meal-info-container .selector-container svg path {
+      fill: #223645;
+    }
+
+    #meal-info-container .selector-container .day-displayer-container {
+      flex-grow: 1;
+      text-align: center;
+
+      display: flex;
+      flex-direction: column; /* Les elements sont placés en colomne, comme ils font tous 100% de leur conteneurs, il n'y a qu'un seul element par colonne*/
+      flex-wrap: wrap; /* Retour à la ligne autorisé, l'element se place à droite de son precedent */
+      height: 100%;
+
+      transition-duration: 0.8s;
+    }
+
+    #meal-info-container .selector-container .day-displayer-container .day-displayer {
+      width: 100%;
+    }
+
+
+/* HISTORY */
+
+#history {
+  position: relative;
+  margin: 5px 0;
+  border: solid 4px #223645;
+}
+
+#history .marginHistory {
+  padding-left: 40px;
+}
+
+#graph {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  border-bottom-width: 0px;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+#graphMax {
+  position: absolute;
+  margin: 0;
+  top: calc(15% - 16px);
+  left: 10px;
+  text-align: right;
+  color: #223645;
+  font-size: 20px;
+}
+
+#graph canvas {
+  width: 100%;
+  height: 100%;
+}
+
+#history .bottomHistory {
+  background: #223645;
+}
+
+div.bottomGraph {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  font-size: 24px;
+  color: #DCDCDC;
+  width: 100%;
+  padding: 5px 24px; /* padding de 4 pixels pour bordure + 20 px pour le padding graph */
+  box-sizing: border-box;
+}
+
+
+div.bottomGraph p.day {
+  display: inline-block;
+  margin: 0;
+  flex-grow: 1;
+}
+
+
+/* NOTIF */
+
+.notifHeader {
+  background-color: #223645;
+  text-align: center;
+  color: #DCDCDC;
+  font-size: 2em;
+  padding: 10px 0;
+  margin-top: 10px 0;
+}
+
+
+.notifBox {
+  position: relative;
+  background-color: #DCDCDC;
+  padding: 10px 30px;
+  box-sizing: border-box;
+  margin: 0 1px;
+  margin-top: 5px;
+  color: #121212;
+  border-right: solid 4px #223645;
+}
+
+.marginNotif {
+  padding-left: 80px;
+}
+
+.notifBox h3{
+  padding: 10px 2px;
+}
+
+.notifBox p.notifContent::after {
+  content: "DD/MM";
+  display: inline-block;
+  opacity: 0;
+  font-size: 0.7em;
+}
+
+
+.notifBox .notifDate {
+  position: absolute;
+  bottom: 0px;
+  right: 10px;
+  font-size: 0.8em;
+}
+
+
+/* PROFILE */
+
+#home #fillable-position { /* Conteneur absolue qui permet de placer le champ de connexion et d'inscription de maniere absolu */
+  position: absolute;
+  right: 200px;
+  top: 200px;
+}
+
+#home button {
+  margin-top: 40px; /* Marge superieur bouton dans connexion */
+}
+
+#home .event-link { /* Texte proposant l'inscription/la connexion si l'utilisateur est/n'est pas inscrit */
+  cursor: pointer;
+  color: #223645;
+  font-size: 0.8em;
+  text-align: center;
+  margin-top: 4px;
+}

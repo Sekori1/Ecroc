@@ -1,0 +1,234 @@
+/*
+COLORS:
+
+#1A1D26
+#223645
+#DCDCDC
+#FFF5EF
+#B83A1B
+
+*/
+
+.fillable-box {
+    display: block;
+}
+
+.fillable-box p {
+    margin: 0;
+}
+
+/* TITLE */
+
+.fillable-box > .fillable-title-content {
+    display: block;
+    background-color: #223645;
+    color: #FFF5EF;
+    text-align: center;
+    height: 60px;
+    line-height: 60px;
+    margin: 0px 0px 7px 0px;
+    -moz-box-shadow: 8px 8px 25px 4px #222;
+    -webkit-box-shadow: 8px 8px 25px 4px #222;
+    -o-box-shadow: 8px 8px 25px 4px #222;
+    box-shadow: 8px 8px 25px 4px #222;
+}
+
+.fillable-box > .fillable-title-content > p.fillable-title {
+    margin: 0;
+    font-size: 25px;
+    font-family: 'Secular One', sans-serif;
+}
+
+/* CONTENT */
+
+.fillable-box > .fillable-content {
+    display: block;
+    margin: 0px;
+    padding: 10px;
+    background-color: #DCDCDC;
+    -moz-box-shadow: 8px 8px 25px 4px #222;
+    -webkit-box-shadow: 8px 8px 25px 4px #222;
+    -o-box-shadow: 8px 8px 25px 4px #222;
+    box-shadow: 8px 8px 25px 4px #222;
+}
+
+
+/* INPUT FILLABLE TEXT ICON */
+
+div.fillable-text-icon {
+    position: relative;
+}
+
+div.fillable-text-icon > svg {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 20px;
+    left: 15px;
+}
+
+div.fillable-text-icon > svg path {
+    fill: #223645;;
+}
+
+div.fillable-text-icon > span {
+    position: absolute;
+    left: 51px;
+    width: 2px;
+    height: 37px;
+    background-color: #223645;
+}
+
+div.fillable-text-icon > input {
+    border-radius: 12px;
+    border: solid 2px #223645;
+    padding: 7px 7px 7px 63px;
+    background-color: transparent;
+    font-family: 'Secular One', sans-serif;
+    color: #223645;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+div.fillable-text-icon > input:focus {
+    outline-width: 0;
+}
+
+/* SIMPLE INPUT FILLABLE */
+
+input.fillable-text {
+    position: relative;
+    display: block;
+    border-radius: 12px;
+    border: solid 2px #223645;
+    background-color: transparent;
+    height: 41px;
+    line-height: 37px;
+    padding: 4px 18px;
+    min-width: 100px;
+    box-sizing: border-box;
+    font-family: 'Secular One', sans-serif;
+    color: #223645;
+}
+
+input.fillable-text:focus {
+    outline-width: 0;
+}
+
+/* EDIT TEXT */
+
+div.edit-text {
+
+}
+
+div.edit-text div.error-zone {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: row;
+  height: 0px;
+  overflow: hidden;
+}
+
+div.edit-text div.error-zone.active {
+  height: 16px;
+}
+
+div.edit-text div.error-zone svg {
+  height: 14px;
+  width: 14px;
+  margin: auto 5px;
+}
+
+div.edit-text div.error-zone svg path {
+  fill: #B83A1B;
+}
+
+div.edit-text div.error-zone p {
+  margin: auto 0;
+  font-size: 12px;
+  color: #333;
+}
+
+div.edit-text div.edit-zone {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    width: 250px;
+}
+
+div.edit-text div.edit-zone svg {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 20px;
+    right: 15px;
+    transition-duration: 0.2s;
+}
+
+div.edit-text div.edit-zone > .icon-container:hover svg {
+  right: 20px;
+  height: 24px;
+}
+
+div.edit-text div.edit-zone svg path {
+    fill: #FFF5EF;
+}
+
+div.edit-text div.edit-zone > .icon-container:hover svg path {
+  fill: #FFFFFF;
+}
+
+div.edit-text div.edit-zone > .icon-container {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 54px;
+    height: 100%;
+    background-color: #223645;
+    transition-duration: 0.3s;
+    border: solid 0px rgba(0,0,0,0);
+    /*border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;*/
+}
+
+div.edit-text div.edit-zone > .icon-container:hover {
+  width: 72px;
+  cursor: pointer;
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+}
+
+div.edit-text div.edit-zone > input {
+    border-radius: 12px;
+    border: solid 2px #223645;
+    padding: 4px 50px 4px 18px;
+    background-color: transparent;
+    font-family: 'Secular One', sans-serif;
+    box-sizing: border-box;
+    color: #223645;
+    width: 100%;
+}
+
+div.edit-text div.edit-zone > input:focus {
+    outline-width: 0;
+}
+
+/* BUTTON */
+
+.fillable-btn {
+    border: none;
+    display: block;
+    text-decoration: none;
+    background-color: #223645;
+    padding: 4px 30px;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 12px;
+    color: #DCDCDC;
+    font-family: 'Secular One', sans-serif;
+}
+
+
+.fillable-content .fillable-btn  {
+    margin: 0 auto; /* Centrage du bouton si celui ci est dans un "fillable-content" */
+}

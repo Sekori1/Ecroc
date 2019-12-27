@@ -1,0 +1,290 @@
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+/* DOG INFOS */
+
+#dogInfos {
+    display: flex;
+    flex-direction: row;
+    padding: 20px 10px;
+}
+
+#profilImg {
+  position: relative;
+    height: 120px;
+    width: 120px;
+    margin: 0 10px;
+    /*background-color: #223645;*/
+    border-radius: 50%;
+    border: solid 3px #223645;
+    background-size: cover;
+    background-position: center;
+    flex-shrink: 0;
+}
+
+#profilImg .inputfile {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;  
+}
+
+#profilImg .inputfile + label {
+  position: absolute;
+  right: -10px;
+  bottom: -10px;
+  font-size: 1.25em;
+  font-weight: 700;
+  color: white;
+  display: inline-block;
+}
+
+#profilImg .inputfile + label > div {
+  background-color: #EB5160;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+#profilImg .inputfile + label > div svg{
+  height: 25px;
+  width: 25px;
+  margin: 10px;  
+}
+
+#profilImg .inputfile + label > div svg * {
+  transition-duration: 0.2s;
+  fill: #223645;
+}
+
+#profilImg .inputfile:focus + label > div svg *,
+#profilImg .inputfile + label:hover > div svg * {
+  fill: #DDD;
+}
+
+#dogInfosContent {
+  position: relative;
+}
+
+#dogInfosContent .fillable-text {
+  margin-top: 15px;
+  height: 33px !important;
+  width: 100%;
+  min-width: 20px !important;
+}
+
+#dogInfosContent .fillable-btn {
+  margin-top: 25px; 
+  float: right;
+  height: 33px;
+}
+
+#dogInfos .birth-weight-block .birthday {
+    flex-grow: 1;
+    margin-right: 2px;
+}
+
+#dogInfos .birth-weight-block .weight {
+    flex-shrink: 2;
+    margin-left: 2px;
+}
+
+/* HEADER */
+
+#calendarHeader {
+  display: flex;
+  text-align: left;
+  border-top: solid 2px #223645;
+  padding: 2px 0 0 30px;
+}
+
+#calendarHeader > * {
+  flex-shrink: 0;
+}
+
+#calendarHeader a {
+  display: block;
+  box-sizing: border-box;
+  margin: 0 2px;
+}
+
+#calendarHeader a:hover {
+  text-decoration: none;
+}
+
+#calendarHeader a svg {
+  height: 32px;
+  width: 32px;
+  padding: 7px;
+  transition-duration: 0.5s;
+  box-sizing: border-box;
+  border: solid 1px #223645;
+  fill: #223645;
+  border-radius: 50%;
+}
+
+#calendarHeader a.active svg {
+  box-sizing: border-box;
+  border: solid 1px #223645;
+  background-color: #223645;
+  fill: #DEDEDE;
+}
+
+#calendarHeader a:hover svg {
+  border: solid 1px #EB5160;
+  background-color: #EB5160;
+  fill: #DEDEDE;
+}
+
+#calendarHeader a {
+  transition-duration: 0.4s;
+  overflow: hidden;
+  max-width: 32px;
+}
+
+#calendarHeader a.hide {
+  max-width: 0;
+}
+
+#deleteSubmit {
+  display: none;
+}
+
+#deleteCounter {
+  box-sizing: border-box;
+  text-align: center;
+  overflow: hidden;
+  max-width: 32px;
+  margin: 0 2px;
+  transition-duration: 0.5s;
+}
+
+#deleteCounter.hide {
+  max-width: 0px;
+}
+
+#deleteCounter p {
+  height: 32px;
+  width: 32px;
+  box-sizing: border-box;
+  background-color: #223645;
+  border-radius: 50%;
+  line-height: 32px;
+  color: #DEDEDE;
+  margin: 0;
+}
+
+#calendarHeader .info {
+  display: block;
+  opacity: 0;
+  margin-left: 10px;
+  transition-duration: 0.4s;
+}
+
+#calendarHeader .info.active {
+  opacity: 1;
+}
+
+#calendarHeader .info p {
+  line-height: 32px;
+  margin: 0;
+}
+
+/* ADD MEAL CONTAINER */
+
+#mealAddContainer {
+  position: absolute;
+  z-index: 1000;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%); /* décalage de 50% de sa propre taille */
+  transition-delay: 1s;
+}
+
+#mealAdd {
+  position: absolute;
+  top: -1000px;
+  left: 0;
+  transform: translate(-50%, -50%); /* décalage de 50% de sa propre taille */
+  width: 400px;
+  opacity: 0;
+  transition-duration: 1s, 1s;
+  transition-property: top, opacity;
+  transition-delay: 0s, 1s;
+}
+
+#mealAdd.active {
+  top: 0;
+  opacity: 1;
+  transition-duration: 1s, 0s;
+  transition-property: top, opacity;
+  transition-delay: 0s, 0s;
+}
+
+/*  MASK */
+
+#mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(52,73,94,0.7);
+  z-index: -10;
+  opacity: 0;
+}
+
+#mask.active {
+  z-index: 10;
+  opacity: 1;
+  transition-property: opacity;
+  transition-duration: 1s;
+}
+
+/* DAY SELECTOR */
+
+#mealAdd{
+  text-align: center;
+}
+
+#mealAdd .fillable-text {
+  margin: 0 auto;
+  text-align: center;
+  height: 30px;
+  width: 150px;
+}
+
+.mealDaySelectorContainer {
+  border: solid 2px #223645;
+  background-color: #223645;
+  border-radius: 40px;
+  overflow: hidden;
+  box-sizing: border-box;
+  margin: 0 50px;
+}
+
+.mealDaySelectorContainer .mealDaySelector {
+  display: grid;
+  font-size: 15px;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.mealDaySelectorContainer .mealDaySelector p {
+  border-right: solid 2px #223645;
+  background-color: #EFEFEF;
+  cursor: pointer;
+  padding: 4px 0;
+}
+
+.mealDaySelectorContainer .mealDaySelector p.active {
+  background-color: #223645;
+  color: #EFEFEF;
+}
+
+.mealDaySelectorContainer .mealDaySelector p:last-child {
+  border-right: solid 0px #223645;
+}
+
+#mealAdd .fillable-btn {
+  margin-top: 20px;
+}

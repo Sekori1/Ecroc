@@ -1,0 +1,130 @@
+
+/* CALENDAR */
+
+#mealCalendar {
+    position: relative;
+    display: block;
+    padding: 0;
+    max-width: 1020px;
+    text-align: center;
+}
+
+.calendarAlign {
+    display: inline-block;
+}
+
+.calendarGrid {
+    position: relative;
+    display: grid;
+    width: 100%;
+    grid-template-rows: repeat(8, 1fr) !important;
+    grid-auto-columns: minmax(auto, 180px) !important;
+    margin: 0 auto;
+}
+
+/* DAYS ROW */
+
+.topRow {
+    grid-column: 1;
+    grid-row: 2 / span 7;
+    align-items: center;
+    display: grid;
+
+    grid-template-rows: repeat(7, 1fr);
+    grid-template-columns: 100%;
+}
+
+.topRow .day {
+    text-align: center;
+    background-color: #223645;
+    color: #FFF;
+    padding: 12px 2px;
+    margin: 3px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* MEALS */
+
+#mealCalendar .mealRow {
+    grid-row: 1 / span 8;
+
+    display: grid;
+    grid-template-rows: repeat(8, 1fr);
+    grid-template-columns: 100%;
+
+    align-items: center;
+}
+
+
+#mealCalendar .mealRow .mealNumber {
+    grid-column: 1;
+    height: 80%;
+    margin: 0 5px;
+    text-align: center;
+    background-color: #223645;
+    color: #FFF;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#mealCalendar .mealRow p {
+    margin: 0;
+}
+
+/* MEAL CARD */
+
+#mealCalendar .mealCard {
+    text-align: center;
+    color: #223645;
+    padding: 7px 2px;
+    height: 100%;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    transition-duration: 0.2s;
+}
+
+#mealCalendar.deleteProcess .mealCard:not(.empty) {
+    background-color: rgba(34, 54, 69, 0.096);
+    cursor: pointer;
+}
+
+#mealCalendar.deleteProcess .mealCard.active:not(.empty) {
+    background-color: #EB5160;
+}
+
+#mealCalendar.deleteProcess .mealCard:not(.empty) * {
+    color: #a4acb3 !important;
+}
+
+
+#mealCalendar.deleteProcess .mealCard.active:not(.empty) * {
+    color: #FFF !important;
+}
+
+
+#mealCalendar .mealCard .mealWeight {
+
+    text-align: center;
+
+    color: #223645;
+    margin: 0 auto;
+
+}
+
+#mealCalendar .mealCard .mealHour {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    line-height: 13px;
+    letter-spacing: -0.5px;
+    color: #223645;
+}

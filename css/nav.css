@@ -1,0 +1,100 @@
+/*
+COLORS:
+
+#1A1D26
+#223645
+#DCDCDC
+#FFF5EF
+#B83A1B
+
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Secular+One');
+
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: 'Secular One', sans-serif;
+}
+
+/* NAV */
+
+nav {
+    position: relative;
+    height: 65px;
+    width: 100%;
+    background-color: #223645;
+}
+
+#navContainer {
+    position: relative;
+    height: 100%;
+    margin: 0 30px;
+}
+
+@media screen and (max-width: 660px) {
+    #navContainer {
+        margin: 0 5px;
+    }
+}
+
+nav p {
+    line-height: 65px;
+    margin: 0;
+}
+
+nav a {
+    text-decoration: none;
+    margin: 0;
+}
+
+nav a:hover {
+    text-decoration: none;
+    margin: 0;
+}
+
+    /* LEFT */
+
+    nav p.logo, nav p.logo a {
+        text-transform: uppercase;
+        color: #FFF5EF;
+        font-size: 30px;
+    }
+
+    nav p.logo {
+        position: absolute;
+        left: 0px;
+    }
+
+    /* RIGHT */
+
+    nav div.right {
+        white-space: nowrap;
+        position: absolute;
+        display: inline-block;
+        right: 0px;
+    }
+
+
+    nav svg {
+        position: relative;
+        margin: 0 5px;
+        bottom: 2px;
+        height: 25px;
+        vertical-align:middle;
+    }
+
+    nav svg path {
+        fill: #FFF5EF;
+    }
+
+    nav p:not(.logo), nav p:not(.logo) a {
+        display: inline;
+        color: #FFF5EF;
+        font-size: 19px;
+    }
+
+    nav p.control {
+        margin: 0 30px;
+    }

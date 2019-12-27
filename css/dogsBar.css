@@ -1,0 +1,161 @@
+/*
+COLORS:
+
+#1A1D26
+#223645
+#DCDCDC
+#FFF5EF
+#B83A1B
+
+SPECIAL: #c82e23
+*/
+
+#dogsBar {
+    background-color: #DCDCDC;
+    padding: 20px 0;
+    overflow: auto;
+}
+
+#dogsBar .dogListContainer {
+    display: flex;
+}
+
+#dogsBar .dogList {
+    white-space: nowrap;
+    margin: auto;
+}
+
+#dogsBar .dog-block {
+    position: relative;
+    text-decoration: none;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0px 7px;
+}
+
+#dogsBar .dog-picture {
+    height: 70px;
+    width: 70px;
+    margin: 0 7px;
+    border: solid 2px #223645;
+    border-radius: 50%;
+    box-sizing: border-box;
+    /*background-image: url(../images/dogs/default.png); /* Default background */
+    background-size: cover;
+    background-position: center;
+}
+
+#dogsBar .dog-add {
+    height: 70px;
+    width: 70px;
+    margin: 0 7px;
+    border: solid 2px #223645;
+    border-radius: 50%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    transition-duration: 0.4s;
+}
+
+#dogsBar .dog-add:hover {
+    background-color: #223645;
+}
+
+
+#dogsBar .dog-add:hover svg {
+    fill: #DCDCDC;
+}
+
+
+#dogsBar .dog-add svg {
+    transition-duration: 0.4s;
+    display: block;
+    margin: 0 auto;
+    height: 40px;
+    fill: #223645;
+}
+
+
+#dogsBar .notif {
+    display: inline-block;
+    position: absolute;
+    width: 29px;
+    height: 29px;
+    border-radius: 50%;
+    background-color: #c82e23;
+    text-align: center;
+    line-height: 29px;
+    color: #fff;
+    right: 0px;
+    top: 0px;
+}
+
+#dogsBar .dog-name {
+    text-align: center;
+    font-size: 0.8em;
+    color: #223645;
+    margin: 6px 0;
+}
+
+#profileAddButton {
+    cursor: pointer;
+}
+
+/* PROFILE ADD */
+
+#profileAddContainer {
+    position: absolute;
+    z-index: 1000;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%); /* décalage de 50% de sa propre taille */
+    transition-delay: 1s;
+}
+
+#profileAdd {
+    position: absolute;
+    top: -1000px;
+    left: 0;
+    transform: translate(-50%, -50%); /* décalage de 50% de sa propre taille */
+    width: 400px;
+    opacity: 0;
+    transition-duration: 1s, 1s;
+    transition-property: top, opacity;
+    transition-delay: 0s, 1s;
+}
+
+#profileAdd.active {
+    top: 0;
+    opacity: 1;
+    transition-duration: 1s, 0s;
+    transition-property: top, opacity;
+    transition-delay: 0s, 0s;
+}
+
+#profileAdd .fillable-text-icon {
+  margin: 10px auto; /* Alignement des champs texte au centre du conteneur inscription*/
+  width: 300px;
+}
+
+#profileAdd p.help {
+  margin: 10px 35px;
+  text-align: justify;
+  color: #223645;
+}
+
+#mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(52,73,94,0.7);
+  z-index: -10;
+  opacity: 0;
+}
+
+#mask.active {
+  z-index: 10;
+  opacity: 1;
+  transition-property: opacity;
+  transition-duration: 1s;
+}

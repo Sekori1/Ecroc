@@ -1,0 +1,117 @@
+/*
+COLORS: 
+
+#1A1D26
+#223645
+#DCDCDC
+#FFF5EF
+#B83A1B
+
+*/
+
+/* PAGE */
+
+@viewport {
+   width: device-width; /* largeur du viewport */
+   zoom: 1; /* zoom initial à 1.0 (et clin d'oeil aux fans d'IE6/7) */
+}
+
+    /* HOME */
+
+    #home { /* Image de présentation qui couvre toutes la page d'acceuil */
+        z-index: -1;
+        position: absolute; 
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-image: url(../images/public/chien_background.jpeg);
+        background-size: cover;
+        background-position: left 18% top 20%;
+        background-repeat: no-repeat;
+    }
+
+        /* COMMON */
+
+        #home .row .fillalbe-align {
+            position: relative;
+            display: block;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        #fillable-position { /* Conteneur absolue qui permet de placer le champ de connexion et d'inscription de maniere absolu */
+            display: block;
+            position: relative;
+            width: 400px;/* Definit la taille de l'enfant*/
+            max-width: calc(100vw - 15px);
+            height: 100vh;
+            margin: 0 auto;
+        }
+
+        #fillable-position .fillable-box {
+            box-sizing: border-box;
+            max-width: 100%;
+            overflow: hidden;
+        }
+
+        #home .fillable-btn {
+            margin-top: 40px; /* Marge superieur bouton dans connexion */
+        }
+
+        #home .event-link { /* Texte proposant l'inscription/la connexion si l'utilisateur est/n'est pas inscrit */
+            cursor: pointer;
+            color: #223645;
+            font-size: 0.8em;
+            text-align: center;
+            margin-top: 4px;
+        }
+
+        #register, #login { /* Placement du conteneur dans la page de maniere absolu*/
+            position: absolute;
+            left: 0; /* La position absolu est géré par le parent fillable-position afin de ne pas peturber l'animation */
+            top: 20vh;
+            width: 100%;/* Taille geré par le parent*/
+        }
+
+        /* LOGIN */
+
+       #login .fillable-text-icon { 
+            margin: 10px auto; /* Alignement des champs texte au centre du conteneur inscription*/
+            width: 300px;
+        }
+
+        /* REGISTER */ 
+
+        #register .fillable-text-icon {
+            margin: 10px auto; /* Alignement des champs texte au centre du conteneur inscription*/
+            width: 300px;
+        }
+
+        #home .names {
+            display: flex;
+            margin: 25px auto 10px auto;
+            width: 306px; /* 300 + 3 + 3 (Marges des elements enfants)*/
+        }
+
+        #home .names * {
+            margin: 0 3px;
+        }
+
+        /* ANIMATION */ 
+
+        #login, #register {
+            transition-duration: 0.7s;
+        }
+
+        #login.mask, #register.mask {
+            opacity: 0;
+            left: 550px;
+        }
+
+    /* CONTENT */
+
+    #page-content {
+        position: absolute;
+        top: 100%;
+    }

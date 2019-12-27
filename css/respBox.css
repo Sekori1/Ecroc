@@ -1,0 +1,11 @@
+.respBox {
+    margin: 0 auto;
+    padding: 0;
+    width: 860px;
+}
+
+@media screen and (max-width: 860px) {
+    .respBox {
+        width: 100%;
+    }
+}
