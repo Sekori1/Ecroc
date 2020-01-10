@@ -34,8 +34,11 @@ include "dogSelector.php"; /* Page consacré à un chien en particulier, selecti
 		<title>test</title>
 	</head>
 	<body>
+	
 		<?php include 'navBar.php'; ?>
 		<?php include 'dogsBar.php'; ?>
+
+		<?php if($profilFound) { ?></h1>
 
 		<form enctype="multipart/form-data" action="changeInfo.php" method="post">
 			<div id="dogInfos" class="container">
@@ -146,6 +149,7 @@ include "dogSelector.php"; /* Page consacré à un chien en particulier, selecti
 		</div>
 		<!-- Masque lorsque le formulaire pour ajouter un chien apparait -->
 		<div id="mask"></div>
+	<?php } ?>
 	</body>
 	<script type="text/javascript" src="js/dogsBar.js"></script>
 	<script type="text/javascript" src="js/calendar.js"></script>

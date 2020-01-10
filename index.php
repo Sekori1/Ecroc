@@ -6,6 +6,8 @@ require 'connect.php';
 
 $isLogged = isset($_SESSION["id"]);
 
+$logs = array();
+
 /* SI L'UTILISATEUR N'EST PAS CONNECTÉ */
 if(!$isLogged){
 	/* L'UTILISATEUR DEMANDE À SE CONNECTER */
@@ -175,6 +177,8 @@ function getSafeInfo($name){
 	<script type="text/javascript" src="js/index.js"></script>
 
 	<?php
+
+	
 		function debug($log){
 			global $logs;
 			array_push($logs, $log);
