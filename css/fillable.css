@@ -75,7 +75,7 @@ div.fillable-text-icon > span {
     position: absolute;
     left: 51px;
     width: 2px;
-    height: 37px;
+    height: 100%;
     background-color: #223645;
 }
 
